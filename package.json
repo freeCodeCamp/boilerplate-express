@@ -1,6 +1,6 @@
 {
 	"name": "fcc-learn-node-with-express",
-	"author": "Preston",
+	"author": "Preston Sharpe",
 	"version": "0.1.0",
 	"dependencies": {
 		"express": "^4.14.0",
