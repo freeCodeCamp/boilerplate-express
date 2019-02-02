@@ -19,7 +19,7 @@ var app = express();
 
 /** 4) Serve static assets  */
 
-
+console.log("Hello World");
 /** 5) serve JSON on a specific route */
 
 
