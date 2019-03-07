@@ -53,5 +53,6 @@ var app = express();
 /** app.listen(process.env.PORT || 3000 ); */
 
 //---------- DO NOT EDIT BELOW THIS LINE --------------------
+console.log("Hello World");
 
  module.exports = app;
