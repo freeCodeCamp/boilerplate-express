@@ -23,9 +23,8 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html")
 });
 
-
 /** 4) Serve static assets  */
-
+ app.use(express.static(__dirname + "/public"));
 
 /** 5) serve JSON on a specific route */
 
