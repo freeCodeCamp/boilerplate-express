@@ -34,6 +34,7 @@ app.use(express.static(__dirname + "/public"));
 */
 
 /** 6) Use the .env file to configure the app */
+/*
 process.env.MESSAGE_STYLE = 'uppercase';
 
 app.get("/json", (req, res) => {
@@ -45,10 +46,17 @@ app.get("/json", (req, res) => {
    
    res.json({"message": response});
 });
+*/
  
 /** 7) Root-level Middleware - A logger */
 //  place it before all the routes !
-
+app.use(function middleware(req, res, next) {
+  // Do something
+  var string = req.method + ' ' + req.path + ' - ' + req.ip;
+  console.log(string);
+  // Call the next function in line:
+  next();
+});
 
 /** 8) Chaining middleware. A Time server */
 
