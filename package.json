@@ -1,17 +1,25 @@
 {
-	"name": "fcc-learn-node-with-express",
-	"version": "0.1.0",
-	"dependencies": {
-		"express": "^4.14.0",
-		"body-parser": "^1.15.2",
-		"cookie-parser": "^1.4.3",
-		"fcc-express-bground": "https://github.com/Em-Ant/fcc-express-bground-pkg.git"
-	},
-	"main": "server.js",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"engines": {
-		"node": "4.4.5"
-	}
+  "author": "Ian",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ],
+  "description": "Practicing with glitch",
+  "version": "0.0.1",
+  "license": "MIT",
+  "name": "fcc-learn-npm-package-json",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "fcc-express-bground": "https://github.com/Em-Ant/fcc-express-bground-pkg.git"
+  },
+  "engines": {
+    "node": "4.4.5"
+  }
 }
