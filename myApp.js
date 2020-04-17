@@ -24,7 +24,14 @@ var app = express();
 
 
 /** 6) Use the .env file to configure the app */
- 
+app.get("/json",(req, res) =>{
+if(process.env.MESSAGE_STYLE === "uppercase"){
+res.json({"message": :HELLO JSON"})
+}
+         else{
+         res.json({"message": "Hello json})
+         };
+});
  
 /** 7) Root-level Middleware - A logger */
 //  place it before all the routes !
