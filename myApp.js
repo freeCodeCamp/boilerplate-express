@@ -15,21 +15,41 @@ app.get('/', (req,res)=>{
   res.send('Hello Express');
 })*/
 
+/** 7) Root-level Middleware - A logger */
+//  place it before all the routes !
+// Root Level Logger Middleware
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path} - ${req.ip}`);
+  next();
+})
+
 /** 3) Serve an HTML file */
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/views", "index.html"));
 });
 
 /** 4) Serve static assets  */
+app.use(express.static(path.join(__dirname, 'public')));
 
 /** 5) serve JSON on a specific route */
+app.get("/json", (req, res) => {
+  let message = "Hello json";
+  if(process.env.MESSAGE_STYLE === "uppercase"){
+    message = message.toUpperCase();
+  }
+  res.json({message});
+})
 
 /** 6) Use the .env file to configure the app */
 
-/** 7) Root-level Middleware - A logger */
-//  place it before all the routes !
 
 /** 8) Chaining middleware. A Time server */
+app.get("/now", (req, res, next)=>{
+  req.time = new Date().toString();
+  next();
+}, (req, res) => {
+  res.json({ time: req.time});
+})
 
 /** 9)  Get input from client - Route parameters */
 
