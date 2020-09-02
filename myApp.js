@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+const path = require("path");
 
 // --> 7)  Mount the Logger middleware here
 
@@ -15,7 +16,7 @@ app.get('/', (req,res)=>{
 
 /** 3) Serve an HTML file */
 app.get("/", (req, res) => {
-  res.sendFile(__dirname("views", "index.html"));
+  res.sendFile(path.join(__dirname, "/views", "index.html"));
 });
 
 /** 4) Serve static assets  */
