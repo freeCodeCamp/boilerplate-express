@@ -7,9 +7,13 @@
 		"cookie-parser": "^1.4.3",
 		"fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git"
 	},
+	"devDependencies": {
+		"dotenv": "8.2.0"
+	},
 	"main": "server.js",
 	"scripts": {
-		"start": "node server.js"
+		"start": "node server.js",
+		"start-local": "node -r dotenv/config server.js"
 	},
 	"engines": {
 		"node": "4.4.5"
