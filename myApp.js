@@ -28,7 +28,14 @@ app.get("/json", function(req, res) {
   
   console.log(req.method+" "+req.path+" - "+req.ip);
   
-})
+});
+
+app.get("/now", function(req, res, next){
+    req.time = new Date().toString();
+    next();
+}, function(req, res) {
+  res.json({time: req.time});
+});
 
 
 
