@@ -7,8 +7,8 @@ app.use(express.static(__dirname));
 
 app.get("/json", function(req, res) {
   let response = "Hello json";
-  if (process.env.MESSAGE_STYLE == "uppercase") {
-    response  = "Hello json".toUpperCase();
+  if(process.env.MESSAGE_STYLE == "uppercase") {
+    response = response.toUpperCase();
   }
   res.json({"message": response });
 })
