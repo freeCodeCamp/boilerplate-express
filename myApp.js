@@ -6,7 +6,10 @@ const absolutePath = __dirname + "/views/index.html"
 app.use(express.static(__dirname));
 
 app.get("/json", function(req, res) {
-  res.json({"message": "Hello json" });
+  let response = "Hello json";
+  if(process.env.MESSAGE_STYLE === "uppercase")
+    response = response.toString();
+  res.json({"message": response });
 })
 
 app.get("/", function(req, res) {
