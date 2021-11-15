@@ -4,13 +4,14 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "fcc-express-bground": "git+https://github.com/freeCodeCamp/fcc-express-bground-pkg.git"
   },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-	"dev": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "description": "",
   "repository": {
