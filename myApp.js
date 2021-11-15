@@ -2,6 +2,13 @@ var express = require('express');
 var app = express();
 require("dotenv").config();
 
+// Implement a Root-Level Request Logger Middleware
+app.use("/", function (req, res, next) {
+  const string = req.method + " " + req.path + " - " + req.ip;
+  console.log(string);
+  next()
+});
+
 app.use("/public", express.static(__dirname + "/public"));
     
 
