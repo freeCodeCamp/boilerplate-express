@@ -54,5 +54,11 @@ app.get("/:word/echo", (req, res) => {
   res.send({ echo: word });
 });
 
+// Get Data from POST Requests
+app.post("/name", (req, res) => {
+  const firstName = req.body.first;
+  const lastName = req.body.last;
+  res.send({ name: `${firstName} ${lastName}` });
+});
 
 module.exports = app;
