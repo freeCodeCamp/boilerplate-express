@@ -8,7 +8,11 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + "/views/index.html");
 });
 
-
+app.get("/json", (request, response) => {
+  response.json({ message: 
+                    "Hello json"
+                });
+});
 
 
 
