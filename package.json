@@ -9,7 +9,8 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+	"dev": "nodemon server.js"
   },
   "description": "",
   "repository": {
@@ -22,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/gulnihaln/boilerplate-express/issues"
   },
-  "homepage": "https://github.com/gulnihaln/boilerplate-express#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+  "homepage": "https://github.com/gulnihaln/boilerplate-express#readme"
 }
