@@ -9,6 +9,18 @@ app.use("/", function (req, res, next) {
   next()
 });
 
+// Chain Middleware to Create a Time Server
+app.get(
+  "/now",
+  (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+  },
+  (req, res) => {
+    res.send({ time: req.time });
+  }
+);
+
 app.use("/public", express.static(__dirname + "/public"));
     
 
