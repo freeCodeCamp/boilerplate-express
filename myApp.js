@@ -3,9 +3,11 @@ var app = express();
 
 console.log('Hello World')
 
-app.get('/', (_req, res) => {
-  res.send('Hello Express');
+app.get('/', async (_req, res) => {
+  res.sendFile('./views/index.html', { root: __dirname });
 });
+
+
 
 
 
