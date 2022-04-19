@@ -10,21 +10,9 @@ app.get('/',function(req,res){
   res.sendFile(indexPage);
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.get("/json",function(req, res){
+  res.json({message:"Hello json"});
+})
 
 
 
