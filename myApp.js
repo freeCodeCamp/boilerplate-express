@@ -12,7 +12,7 @@ There is the handler which is the function that will handle the request and the 
     res.send("Hello Express");
 });*/
 
-// 4. getting a staic file of css 
+// 4. getting a staic file of css Place such an express file before the get method app
 app.use("/public", express.static(__dirname + "/public"));
 
 // 3. sendFile method goes and gets an static file to present to the page
