@@ -9,7 +9,7 @@ The "/" is the root path which the network will take to get to your website path
 There is the handler which is the function that will handle the request and the responss
 ------------------------------------------------------------*/
 app.get("/", function(req, res){
-    res.send("Hello World");
+    res.send("Hello Express");
 });
 
 
