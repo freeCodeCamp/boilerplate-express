@@ -1,7 +1,9 @@
 let express = require('express');// Light weight js  web framework
 let app = express();
 
-//onsole.log("Hello World");
+
+
+//console.log("Hello World");
 
 /*-----------------------------------------------------------
  2. The get is the express app method.
@@ -12,6 +14,7 @@ There is the handler which is the function that will handle the request and the 
     res.send("Hello Express");
 });*/
 
+
 // 4. getting a staic file of css Place such an express file before the get method app
 app.use("/public", express.static(__dirname + "/public"));
 
@@ -21,10 +24,9 @@ app.get("/", function(req,res){
 });
 
 // 5. A Routing respondes to the /Json
-app.get("/Json", function(req, res){
-    res.json({"message":"Hello json"});
+app.get("/json",(req,res)=>{
+    res.json({"message": "Hello json"});
 });
-
 
 
 
