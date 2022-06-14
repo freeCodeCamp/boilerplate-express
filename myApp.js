@@ -17,6 +17,9 @@ app.get("/", function(req,res){
     res.sendFile(__dirname + "/views/index.html");
 });
 
+// 4. getting a staic file of css 
+app.get("/public", express.static(__dirname + "/public/style.css"));
+
 
 
 
