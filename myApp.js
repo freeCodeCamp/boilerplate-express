@@ -20,6 +20,11 @@ app.get("/", function(req,res){
     res.sendFile(__dirname + "/views/index.html");
 });
 
+// 5. A Routing respondes to the /Json
+app.get("/Json", function(req, res){
+    res.json({"message":"Hello json"});
+});
+
 
 
 
