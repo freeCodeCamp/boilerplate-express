@@ -18,7 +18,7 @@ app.get("/", function(req,res){
 });
 
 // 4. getting a staic file of css 
-app.get("/public", express.static(__dirname + "/public/style.css"));
+app.get(express.static(__dirname + "/public/style.css"));
 
 
 
