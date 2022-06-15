@@ -34,7 +34,15 @@ app.get("/json",(req,res)=>{
          }
 });
 
-
+// 6. This is amiddleware function
+app.use(function(req,res,next){
+    let method = req.method
+    let path = req.path
+    let ip = req.ip
+    var string = method + " " + path + " - " + ip;
+    console.log(string);
+    next();
+});
 
 
 
