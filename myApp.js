@@ -1,3 +1,4 @@
+require('dotenv').config();
 let express = require('express');// Light weight js  web framework
 let app = express();
 
@@ -25,7 +26,11 @@ app.get("/", function(req,res){
 
 // 5. A Routing respondes to the /Json
 app.get("/json",(req,res)=>{
-    res.json({"message": "Hello json"});
+    if(process.env.MESSAGE_STYLE === 'uppercase'){
+        res.json({"message": "HELLO JSON"});
+    }
+    else{res.json({"message": "Hello json"});
+         }
 });
 
 
