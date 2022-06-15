@@ -52,7 +52,10 @@ app.get("/now", (req,res,next)=>{
     res.send({time:req.time});
 });
 
-
+// 8.When building an API, we have to allow users to communicate to us what they want to get from our service.
+app.get("/:word/echo",function(req,res){
+    res.json({echo: req.params.word});
+  });
 
 
 
