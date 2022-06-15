@@ -15,6 +15,15 @@ There is the handler which is the function that will handle the request and the 
     res.send("Hello Express");
 });*/
 
+// 6. This is amiddleware function
+app.use(function(req,res,next){
+    let method = req.method
+    let path = req.path
+    let ip = req.ip
+    var string = method + " " + path + " - " + ip;
+    console.log(string);
+    next();
+});
 
 // 4. getting a staic file of css Place such an express file before the get method app
 app.use("/public", express.static(__dirname + "/public"));
@@ -34,15 +43,7 @@ app.get("/json",(req,res)=>{
          }
 });
 
-// 6. This is amiddleware function
-app.use(function(req,res,next){
-    let method = req.method
-    let path = req.path
-    let ip = req.ip
-    var string = method + " " + path + " - " + ip;
-    console.log(string);
-    next();
-});
+
 
 
 
