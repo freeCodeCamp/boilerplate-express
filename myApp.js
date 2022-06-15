@@ -1,8 +1,9 @@
 require('dotenv').config();
 let express = require('express');// Light weight js  web framework
 let app = express();
+const bodyParser = require('body-parser');
 
-
+app.use(bodyParser.urlencoded({extended:false}));
 
 //console.log("Hello World");
 
@@ -56,7 +57,7 @@ app.get("/now", (req,res,next)=>{
 app.get("/:word/echo",function(req,res){
     res.json({echo: req.params.word});
   });
-
+   // 9.Get Query Parameter Input from the Client
   app.get("/name", function(req,res){
     var firstname = req.query.first
     var lastname = req.query.last
@@ -64,8 +65,13 @@ app.get("/:word/echo",function(req,res){
     res.json({name:`${ firstname } ${lastname}`});
     });
 
-
-
+    // 10.Use body-parser to Parse POST Requests
+    app.post("/name",function handleBody(req,res){
+        var firstname = req.body.first
+        var lastname = req.body.last
+    
+        res.json({name:`${firstname} ${lastname}`});
+      });
 
 
 
