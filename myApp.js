@@ -24,7 +24,8 @@ app.get("/", function(req,res){
     res.sendFile(__dirname + "/views/index.html");
 });
 
-// 5. A Routing respondes to the /Json
+// 5. A Routing respondes to the /Json and creating an API key in the .env file.
+// !Do not forget to push the code to git hub so that you can pass the freecodecamp challenge
 app.get("/json",(req,res)=>{
     if(process.env.MESSAGE_STYLE === 'uppercase'){
         res.json({"message": "HELLO JSON"});
