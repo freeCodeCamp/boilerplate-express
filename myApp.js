@@ -57,12 +57,12 @@ app.get("/:word/echo",function(req,res){
     res.json({echo: req.params.word});
   });
 
-app.get("/name",(req,res)=>{
+  app.get("/name", function(req,res){
     var firstname = req.query.first
-    var lastname = req.query.lastname
-    // Using template literals to form a formatted string
-  res.json({name:`${ firstname } ${lastname}`});
-});
+    var lastname = req.query.last
+     // Using template literals to form a formatted string
+    res.json({name:`${ firstname } ${lastname}`});
+    });
 
 
 
