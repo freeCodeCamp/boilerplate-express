@@ -8,17 +8,21 @@ app.get("/",(req,res)=>{
     res.sendFile(absolutePath)
 })
 app.use("/public",express.static(ruta))
+var mensaje=process.env['MESSAGE_STYLE']
 
 app.get("/json",(req,res)=>{
     
-    var mensaje=(process.env.MESSAGE_STYLE==='uppercase')? "HELLO JSON":"hello json"
-    res.json(
-        {
-            message:mensaje
-            
-        }
-        );
-});
+     if(mensaje==='uppercase'){
+        res.json(
+            {
+                "message":"Hello json".toUpperCase()
+            }
+            );
+    
+     } else{
+        res.json({"message":"hello json"})
+     }
+    });
 
 
 
