@@ -6,7 +6,7 @@ console.log("Hello World");
 app.get("/",(req,res)=>{
     res.sendFile(absolutePath)
 })
-app.use(express.static(ruta))
+app.use("/public",express.static(ruta))
 
 
 
