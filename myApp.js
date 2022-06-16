@@ -1,3 +1,4 @@
+require("dotenv").config()
 let express = require('express');
 let app = express();
 absolutePath=__dirname + "/views/index.html";
@@ -11,7 +12,8 @@ app.use("/public",express.static(ruta))
 app.get("/json",(req,res)=>{
     res.json(
         {
-            message: "Hello json"
+            message: "Hello json".MESSAGE_STYLE
+            
         }
         );
 });
