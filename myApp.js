@@ -9,8 +9,12 @@ app.get("/",(req,res)=>{
 app.use("/public",express.static(ruta))
 
 app.get("/json",(req,res)=>{
-    res.json({"message": "Hello json"})
-})
+    res.json(
+        {
+            message: "Hello json"
+        }
+        );
+});
 
 
 
