@@ -10,9 +10,9 @@ app.get("/",(req,res)=>{
     res.sendFile(absolutePath)
 })
 app.use("/public",express.static(ruta))
-
+const mensaje=process.env['MESSAGE_STYLE']
 app.get('/json',(req,res)=>{
-    const mensaje=process.env['MESSAGE_STYLE']
+   
      if(mensaje==="uppercase"){
         res.json(
             {"message": "HELLO JSON"}
