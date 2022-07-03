@@ -5,6 +5,8 @@ console.log("Hello World");
 let htmlPath = __dirname + "/views/index.html" ;
 app.get("/", (req, res)=> res.sendFile(htmlPath));
 express.static("/public")
+//add method express static
+
 
 
 

@@ -9,6 +9,7 @@ body {
 
 h1 {
   font-size: 4em;
+  color : #fff;
 }
 
 input[type=text], label {
