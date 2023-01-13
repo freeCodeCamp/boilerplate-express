@@ -1,51 +1,22 @@
 const express = require('express');
 const app = express();
 
-app.use = (express.json());
-
-//const port = 3007;
-
-app.get("/", function(req, res) {
-    res.send("Hello World!")
-})
 
 
+// #1
+
+//console.log("Hello world!");
+
+// #2
+
+// app.get("/", function(req, res) {
+//     res.send("Hello Express!")
+// }); 
+
+// #3
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/views/index.html");
+});
 
 
-//Server!
-// app.listen(port, () => {
-//   console.log(`Server is running port on ${port}`);
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- module.exports = app;
