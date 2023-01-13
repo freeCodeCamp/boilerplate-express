@@ -1,6 +1,7 @@
 let express = require('express');
 let app = express();
 
+app.use("/public", express.static(__dirname + "/public"));
 // Meet the Node console
 console.log("Hello World");
 
