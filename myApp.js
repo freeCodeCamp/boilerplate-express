@@ -12,9 +12,12 @@ app.get("/", function(req, res){
 
 app.get("/json", function(req, res){
     let msgObj = { message: "Hello json" };
-    if (process.env.MESSAGE_STYLE){
-        res.json({ "message": "HELLO JSON"});
-    } else res.json({ message: "Hello json" });
+    if (process.env.MESSAGE_STYLE === "uppercase"){
+        // res.json({"message": msgObj.message.toUpperCase()});
+        res.json({
+            message: "HELLO JSON"
+        });
+    } else res.json({"message": "Hello json"});
 });
 
 
