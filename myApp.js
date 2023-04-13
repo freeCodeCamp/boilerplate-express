@@ -20,7 +20,10 @@ app.get("/", (request, response) => {
 })
 
 
-
+let message = {"message": "Hello json"}
+app.get('/json', (request, response) => {
+  response.json(message)
+})
 
 
 
