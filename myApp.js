@@ -54,7 +54,10 @@ app.get('/:word/echo', (request, response) => {
 })
 
 
-
+app.get("/name", (request, response) => {
+  let string = request.query.first + " " + request.query.last;
+  response.json({ name: string });
+});
 
 
 
