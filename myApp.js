@@ -49,7 +49,9 @@ app.get('/now', (request, response, next) => {
 })
 
 
-
+app.get('/:word/echo', (request, response) => {
+  response.json({echo : request.params.word})
+})
 
 
 
