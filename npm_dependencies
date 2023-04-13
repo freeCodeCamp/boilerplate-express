@@ -1,0 +1,9 @@
+npm install prettier -g
+npm install -g pm2
+npm install express --save
+npm install dotenv
+npm install body-parser
+npm install mocha chai
+npm install jest supertest --save-dev
+npm install chai-http
+npm install
