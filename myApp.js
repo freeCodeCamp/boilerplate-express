@@ -61,7 +61,13 @@ app.get("/name", (request, response) => {
 
 
 
-
+app.post(
+  "/name",
+  bodyParser.urlencoded({ extended: false }),
+  (request, response) => {
+    let string = request.body.first + " " + request.body.last;
+    response.json({ name: string });
+  }
 
 
 
