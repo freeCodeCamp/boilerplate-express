@@ -13,13 +13,14 @@ console.log('Hello World')
  response.send('Hello Express')
 })*/
 
+app.use('/public', express.static(__dirname + '/public'));
 
 app.get("/", (request, response) => {
  response.sendFile(__dirname + '/views/index.html')
 })
 
 
-app.use(express.static('public'));
+
 
 
 
