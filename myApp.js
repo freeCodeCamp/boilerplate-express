@@ -33,16 +33,12 @@ app.get("/:word/echo",function(req,res){
   res.json({"echo" : req.params.word})
 })
 
-//app.get("/name",function(req,res){
-//  res.json({name : req.query.first + " " + req.query.last})
-//})
-
 app.route("/name")
   .get(function(req,res){
     res.json({name : req.query.first + " " + req.query.last});
   }).post(function(req,res){
     
-  })
+})
 
 app.use("/public", express.static(__dirname + "/public"))
 
