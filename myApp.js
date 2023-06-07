@@ -1,6 +1,12 @@
 let express = require('express');
 let app = express();
 
+app.use((req,res,next) => {
+  var method = req.method, path = req.path, ip = req.ip;
+  console.log(method + " " + path + " - " + ip);
+  next();
+})
+
 console.log("Hello World");
 
 app.get("/", function(req, res) {
