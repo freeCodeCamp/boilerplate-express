@@ -1,5 +1,14 @@
 let express = require('express');
 let app = express();
+let bodyParser = require('body-parser');
+
+
+// create application/json parser
+var jsonParser = bodyParser.json()
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(urlencodedParser);
 
 app.use((req,res,next) => {
   var method = req.method, path = req.path, ip = req.ip;
@@ -37,7 +46,6 @@ app.route("/name")
   .get(function(req,res){
     res.json({name : req.query.first + " " + req.query.last});
   }).post(function(req,res){
-    
 })
 
 app.use("/public", express.static(__dirname + "/public"))
