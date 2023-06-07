@@ -46,6 +46,7 @@ app.route("/name")
   .get(function(req,res){
     res.json({name : req.query.first + " " + req.query.last});
   }).post(function(req,res){
+    res.json({name : req.body.first + " " + req.body.last})
 })
 
 app.use("/public", express.static(__dirname + "/public"))
