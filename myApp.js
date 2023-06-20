@@ -37,6 +37,13 @@ app.post("/:word/echo",(req,res)=>{
     })
 })
 
+app.get("/name",(req,res)=>{
+    let firstName = req.query.first;
+    let lastName = req.query.last;
+   // let {first :firstName,last: lastName} = req.query; destructuring way
+    res.json({name: `${firstName} ${lastName}`});
+});
+
 app.get("/json",(req,res)=>{
     if(process.env.MESSAGE_STYLE == "uppercase"){
     res.json({
