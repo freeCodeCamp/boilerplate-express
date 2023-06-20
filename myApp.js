@@ -30,6 +30,13 @@ app.get('/now',(req,res,next)=>{
 }
 );
 
+app.post("/:word/echo",(req,res)=>{
+    const {word} = req.params;
+    res.json({
+        echo:word
+    })
+})
+
 app.get("/json",(req,res)=>{
     if(process.env.MESSAGE_STYLE == "uppercase"){
     res.json({
