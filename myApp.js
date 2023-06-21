@@ -37,6 +37,7 @@ app.post("/:word/echo",(req,res)=>{
     })
 })
 
+
 app.get("/name",(req,res)=>{
     let firstName = req.query.first;
     let lastName = req.query.last;
