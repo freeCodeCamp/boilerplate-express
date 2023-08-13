@@ -1,6 +1,9 @@
 let express = require('express');
 let app = express();
 
+const myApp = "Hello World";
+
+console.log(myApp);
 
 
 
@@ -35,5 +38,4 @@ let app = express();
 
 
 
-
- module.exports = app;
+module.exports = app;
