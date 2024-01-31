@@ -1,7 +1,7 @@
 {
 	"name": "fcc-learn-node-with-express",
 	"version": "0.1.0",
-	"description": "A project that does something awesome",
+	"description": "Test project for Free Code Camp's Learn Node with Express",
 	"dependencies": {
 		"body-parser": "^1.15.2",
 		"cookie-parser": "^1.4.3",
