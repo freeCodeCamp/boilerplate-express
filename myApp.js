@@ -1,5 +1,7 @@
-let express = require('express');
-let app = express();
+// myApp.js
+
+console.log("Hello World");
+
 
 
 
