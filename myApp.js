@@ -48,5 +48,4 @@ app.post("/name", (req, res) => {
     res.json({ name: `${firstName} ${lastName}` });
 })
 
-
- module.exports = app;
+module.exports = app;
